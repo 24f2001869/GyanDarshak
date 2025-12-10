@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "Gyandarshak",
+    "tagline": "Guiding Knowledge. Shaping Futures."
+  },
+  "auth": {
+    "loginTitle": "Login to Gyandarshak",
+    "registerTitle": "Create your Gyandarshak account",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register"
+  },
+  "dashboard": {
+    "title": "Student Dashboard",
+    "viewColleges": "View Colleges",
+    "viewExams": "View Exams",
+    "viewScholarships": "View Scholarships",
+    "adminPanel": "Admin Panel"
+  }
+}

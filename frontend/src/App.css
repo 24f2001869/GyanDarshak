@@ -1,0 +1,536 @@
+:root {
+  --brand-navy: #0c2340;
+  --brand-orange: #f7931d;
+  --brand-green: #009c5a;
+  --bg-light: #f5f7fb;
+  --text-main: #1f2933;
+  --text-muted: #6b7280;
+  --radius-card: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: var(--bg-light);
+  color: var(--text-main);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.app-logo {
+  height: 52px;
+  width: auto;
+}
+
+.app-header-right button {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: background 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.app-header-right button:hover {
+  background: var(--brand-navy);
+  color: #ffffff;
+  border-color: var(--brand-navy);
+}
+
+.app-main {
+  flex: 1;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* Buttons */
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 999px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: var(--brand-navy);
+  color: #ffffff;
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  background: #08162a;
+  box-shadow: 0 4px 10px rgba(12, 35, 64, 0.25);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Primary / secondary variants */
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--brand-navy);
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #f3f4f6;
+  box-shadow: none;
+}
+
+/* Cards */
+
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Forms */
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--brand-navy);
+  box-shadow: 0 0 0 1px rgba(12, 35, 64, 0.2);
+}
+
+/* Headings */
+
+h1,
+h2 {
+  color: var(--brand-navy);
+}
+
+/* Simple responsive tweaks */
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 16px 12px 28px;
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+}
+
+/* Hero section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 0 28px 0;
+}
+
+.hero-left {
+  flex: 1.2;
+}
+
+.hero-right {
+  flex: 0.8;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-note {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.hero-logo {
+  max-width: 280px;
+  width: 100%;
+}
+
+.hero-tagline {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Sections & grids */
+
+.section {
+  margin-top: 28px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.how-list {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.section-cta {
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Admin tabs */
+
+.admin-tabs {
+  margin: 12px 0 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-tab-btn {
+  background: #ffffff;
+  color: var(--text-main);
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.admin-tab-btn--active {
+  background: var(--brand-navy);
+  color: #ffffff;
+  border-color: var(--brand-navy);
+}
+
+/* Text helpers */
+
+.text-muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.error-text {
+  color: #b91c1c;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Filter rows & data tables */
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  align-items: flex-end;
+}
+
+.filter-field label {
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table thead {
+  background: #f3f4f6;
+}
+
+.data-table th,
+.data-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table a {
+  color: var(--brand-navy);
+  text-decoration: none;
+}
+
+.data-table a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard layout helpers */
+
+.dashboard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dashboard-grid-top {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dashboard-grid-bottom {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid-top,
+  .dashboard-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forms: vertical and inline */
+
+.form-vertical > div {
+  margin-bottom: 10px;
+}
+
+.form-inline {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+
+/* Lists in cards */
+
+.card ul {
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+
+.app-nav {
+  display: flex;
+  gap: 12px;
+  margin-left: 24px;
+}
+
+.btn-link {
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  color: var(--text-main);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: var(--brand-navy);
+  text-decoration: underline;
+}
+.app-title {
+  margin-left: 8px;
+  font-weight: 600;
+  color: var(--brand-navy);
+  font-size: 18px;
+}
+
+.app-nav {
+  display: flex;
+  gap: 14px;
+  margin-left: 32px;
+  flex: 1;
+}
+
+.btn-link {
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  color: var(--text-main);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: var(--brand-navy);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .app-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    padding-bottom: 4px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .app-header-right {
+    margin-left: auto;
+  }
+}
+
+/* Tighter, cleaner react-datepicker input */
+.react-datepicker-input {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
+/* Optional: center popup a bit nicer */
+.react-datepicker {
+  font-size: 13px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+  border: 1px solid #e5e7eb;
+}
+
+.react-datepicker__header {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  width: 2rem;
+  line-height: 2rem;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: var(--brand-navy);
+}
+
+.react-datepicker__day--selected:hover {
+  background-color: #08162a;
+}
+
+
+.profile-header-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1d4ed8, #0f172a);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.profile-avatar-small-text {
+  font-size: 12px;
+  color: #6b7280;
+}

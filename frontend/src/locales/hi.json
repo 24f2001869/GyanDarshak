@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "ज्ञानदर्शक",
+    "tagline": "ज्ञान की राह, भविष्य की दिशा।"
+  },
+  "auth": {
+    "loginTitle": "ज्ञानदर्शक में लॉगिन करें",
+    "registerTitle": "अपना ज्ञानदर्शक अकाउंट बनाएं",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल",
+    "phone": "मोबाइल नंबर",
+    "password": "पासवर्ड",
+    "login": "लॉगिन",
+    "register": "रजिस्टर"
+  },
+  "dashboard": {
+    "title": "विद्यार्थी डैशबोर्ड",
+    "viewColleges": "कॉलेज देखें",
+    "viewExams": "परीक्षाएँ देखें",
+    "viewScholarships": "स्कॉलरशिप देखें",
+    "adminPanel": "एडमिन पैनल"
+  }
+}

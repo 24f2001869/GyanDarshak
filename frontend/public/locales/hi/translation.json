@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "loginTitle": "लॉगिन",
+    "registerTitle": "रजिस्टर",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल",
+    "phone": "मोबाइल नंबर",
+    "password": "पासवर्ड",
+    "login": "लॉगिन",
+    "register": "रजिस्टर"
+  },
+  "dashboard": {
+    "title": "मेरा डैशबोर्ड",
+    "viewColleges": "कॉलेज देखें",
+    "viewExams": "परीक्षाएँ देखें",
+    "viewScholarships": "स्कॉलरशिप देखें",
+    "viewTests": "ऑनलाइन टेस्ट",
+    "adminPanel": "एडमिन पैनल"
+  },
+  "tests": {
+    "title": "ऑनलाइन टेस्ट"
+  }
+}

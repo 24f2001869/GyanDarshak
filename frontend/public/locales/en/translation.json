@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "loginTitle": "Login",
+    "registerTitle": "Register",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Mobile number",
+    "password": "Password",
+    "login": "Login",
+    "register": "Register"
+  },
+  "dashboard": {
+    "title": "My dashboard",
+    "viewColleges": "View colleges",
+    "viewExams": "View exams",
+    "viewScholarships": "View scholarships",
+    "viewTests": "Online tests",
+    "adminPanel": "Admin panel"
+  },
+  "tests": {
+    "title": "Online tests"
+  }
+}
